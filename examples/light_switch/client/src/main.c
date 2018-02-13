@@ -420,8 +420,8 @@ static void rtt_input_handler(int key)
 {
     if (key >= '0' && key <= '3')
     {
-        uint32_t button_number = key - '0';
-        button_event_handler(button_number);
+        //uint32_t button_number = key - '0';
+        button_event_handler(0 /*button_number*/);
     }
 }
 

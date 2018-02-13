@@ -109,6 +109,7 @@ nrf_nvic_state_t nrf_nvic_state;
 
 void softdevice_assert_handler(uint32_t id, uint32_t pc, uint32_t info)
 {
+set here breakpoint and reset breakpoint at hardfault
     __LOG(LOG_SRC_APP, LOG_LEVEL_ERROR, "Softdevice assert: %u:%u:%u\n", id, pc, info);
     sleep_forever(pc);
 }

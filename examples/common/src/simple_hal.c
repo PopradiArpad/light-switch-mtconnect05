@@ -51,7 +51,7 @@
 /*****************************************************************************
  * Definitions
  *****************************************************************************/
-#define BUTTON_BOARD (BOARD_PCA10040 || BOARD_PCA10028 || BOARD_PCA10056)
+#define BUTTON_BOARD (BOARD_MTCONNECT05 || BOARD_PCA10040 || BOARD_PCA10028 || BOARD_PCA10056)
 #define LED_PIN_CONFIG ((GPIO_PIN_CNF_SENSE_Disabled << GPIO_PIN_CNF_SENSE_Pos)   | \
                         (GPIO_PIN_CNF_DRIVE_S0S1 << GPIO_PIN_CNF_DRIVE_Pos)       | \
                         (GPIO_PIN_CNF_PULL_Disabled << GPIO_PIN_CNF_PULL_Pos)     | \
