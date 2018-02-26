@@ -5,7 +5,7 @@
   version="2">
   <project Name="light_switch_server_nrf52832_xxAA_s132_3.1.0">
     <configuration
-      Connection="USB 50115396"
+      Connection="USB 50115395"
       Name="Common"
       arm_architecture="v7EM"
       arm_core_type="Cortex-M4"

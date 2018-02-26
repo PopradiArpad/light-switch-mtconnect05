@@ -133,6 +133,9 @@ int main(void)
 #elif SD_BLE_API_VERSION >= 5
     config_params.lf_clk_cfg.source = NRF_CLOCK_LF_SRC_XTAL;
     config_params.lf_clk_cfg.accuracy = NRF_CLOCK_LF_ACCURACY_20_PPM;
+#elif SD_BLE_API_VERSION >= 3
+    config_params.lf_clk_cfg.source = NRF_CLOCK_LF_SRC_XTAL;
+    config_params.lf_clk_cfg.xtal_accuracy = NRF_CLOCK_LF_XTAL_ACCURACY_75_PPM;
 #else
     config_params.lf_clk_cfg.source = NRF_CLOCK_LF_SRC_XTAL;
     config_params.lf_clk_cfg.xtal_accuracy = NRF_CLOCK_LF_XTAL_ACCURACY_20_PPM;

@@ -187,6 +187,8 @@ void mesh_core_setup(void)
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Initializing softdevice\n");
 #if  SD_BLE_API_VERSION >= 5
     nrf_clock_lf_cfg_t lfc_cfg = {NRF_CLOCK_LF_SRC_XTAL, 0, 0, NRF_CLOCK_LF_ACCURACY_20_PPM};
+#elif SD_BLE_API_VERSION >= 3
+    nrf_clock_lf_cfg_t lfc_cfg = {NRF_CLOCK_LF_SRC_XTAL, 0, 0, NRF_CLOCK_LF_XTAL_ACCURACY_75_PPM};
 #elif SD_BLE_API_VERSION >= 2
     nrf_clock_lf_cfg_t lfc_cfg = {NRF_CLOCK_LF_SRC_XTAL, 0, 0, NRF_CLOCK_LF_XTAL_ACCURACY_20_PPM};
 #elif defined(S110)
