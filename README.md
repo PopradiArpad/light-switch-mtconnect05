@@ -1,4 +1,4 @@
-# This code asserts
+# This is an adaptation of the nRF5 SDK for Mesh v1.0.1 to MtConnect05 boards
 
 I adapted the SDK for Mesh v1.0.1 by creating and using new board (mtconnect05.h, BOARD_MTCONNECT05)
 using SERVER_COUNT 1 and simplifying the button handling in main.c.
@@ -11,20 +11,6 @@ I use Segger Embedded Studio with
 project files.
 
 The project files are assigned to dedicated JLink serial numbers.
-
-Reproducing:
-1. Fire up two Segger Embedded Studio one for the server, one for the client.
-2. Adapt the JLink serial numbers to your ones. (In Project explorer > right click on the project > Edit options > JLink > Host connection)
-3. In the Client IDE: Bring up the Breakpoint window and disable the HardFault breakpoint to let catch the hard fault.
-4. Set breakpoint to nrf_mesh_sdk.c line 113 in softdevice_assert_handler
-5. Start Client code
-6. Start Server code
-
-The Provisioning and configuring works but after I put '0' into the RTT of the
-Client I get an assert (sometimes not the first time).
-
-The problem seems to be related to some timing problems.
-
 
 # Introduction to nRF5 SDK for Mesh
 
